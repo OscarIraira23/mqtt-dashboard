@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BG77 - Flespi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>MQTT Dashboard - BG77</h1>
+
+  <div id="status">Estado: <span style="color:red">Desconectado</span></div>
+
+  <div>
+    <label>Filtrar por hora: <input type="datetime-local" id="datetimePicker"></label>
+  </div>
+
+  <canvas id="chart" height="100"></canvas>
+
+  <h3>Datos recibidos:</h3>
+  <pre id="json-output">Esperando datos...</pre>
+
+  <h3>Resumen:</h3>
+  <ul id="summary">
+    <li>Cambios de banda: <span id="band-changes">0</span></li>
+    <li>Cambios de antena: <span id="antenna-changes">0</span></li>
+  </ul>
+
+  <script src="main.js"></script>
+</body>
+</html>
